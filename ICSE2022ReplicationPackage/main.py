@@ -19,7 +19,7 @@ from szz.my_szz import MySZZ
 from data_loader import JAVA_CVE_FIX_COMMITS, C_CVE_FIX_COMMITS, JAVA_PROJECTS, C_PROJECTS, read_cve_commits, load_annotated_commits
 
 def run_szz(project, commits, method, repo_url=None, max_change_size=DEFAULT_MAX_CHANGE_SIZE):
-    output_file = "results/{method}-{project}.json".format(method=method, project=project)
+    output_file = "/home/nikolaos.alexopoulos/PROJECTS/SZZ/V-SZZ/ICSE2022ReplicationPackage/out/{method}-{project}.json".format(method=method, project=project)
 
     if os.path.exists(output_file):
         return
@@ -76,7 +76,7 @@ def run_szz(project, commits, method, repo_url=None, max_change_size=DEFAULT_MAX
                                       max_change_size=max_change_size)
             output[commit] = [commit.hexsha for commit in bug_introducing_commits]
 
-    with open(output_file, 'w') as fout:
+    with open(output_file, 'w+') as fout:
         json.dump(output, fout, indent=4)
 
 if __name__ == "__main__":
@@ -88,7 +88,7 @@ if __name__ == "__main__":
     project_commits = load_annotated_commits()
     for project in project_commits:
         print("Project:", project)
-        run_szz(project, project_commits[project], 'ma')
+        run_szz(project, project_commits[project], 'b')
 
         break
 

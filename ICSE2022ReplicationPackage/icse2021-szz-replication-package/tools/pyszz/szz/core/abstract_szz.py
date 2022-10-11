@@ -53,7 +53,7 @@ class AbstractSZZ(ABC):
 
         if not use_temp_dir:
             # TODO: update the temp directory
-            self.__temp_dir = '/data1/baolingfeng/ICSE2022ReplicationPackage/temp'
+            self.__temp_dir = '/home/nikolaos.alexopoulos/PROJECTS/SZZ/V-SZZ/ICSE2022ReplicationPackage/temp'
 
             repo_dir = os.path.join(repos_dir, repo_full_name)
             self._repository_path = repo_dir

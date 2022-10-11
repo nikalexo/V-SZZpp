@@ -1,0 +1,183 @@
+{
+    "dbbe2ad02e9df26e372f38cc3e70dab9222c832e": [
+        {
+            "line_num": 420,
+            "line_str": "}",
+            "file_path": "arch/x86/kernel/process.c",
+            "previous_commits": [
+                [
+                    "01daf56875ee0cd50ed496a09b20eb369b45dfa5",
+                    420,
+                    "}"
+                ],
+                [
+                    "1f50ddb4f4189243c05926b842dc1a0332195f31",
+                    396,
+                    "}"
+                ]
+            ]
+        },
+        {
+            "line_num": 419,
+            "line_str": "updmsr  = true;",
+            "file_path": "arch/x86/kernel/process.c",
+            "previous_commits": [
+                [
+                    "01daf56875ee0cd50ed496a09b20eb369b45dfa5",
+                    419,
+                    "updmsr  = true;"
+                ]
+            ]
+        },
+        {
+            "line_num": 418,
+            "line_str": "msr |= ssbd_tif_to_spec_ctrl(tifn);",
+            "file_path": "arch/x86/kernel/process.c",
+            "previous_commits": [
+                [
+                    "01daf56875ee0cd50ed496a09b20eb369b45dfa5",
+                    418,
+                    "msr |= ssbd_tif_to_spec_ctrl(tifn);"
+                ]
+            ]
+        },
+        {
+            "line_num": 417,
+            "line_str": "if (tif_diff & _TIF_SSBD) {",
+            "file_path": "arch/x86/kernel/process.c",
+            "previous_commits": [
+                [
+                    "5bfbe3ad5840d941b89bcac54b821ba14f50a0ba",
+                    417,
+                    "if (tif_diff & _TIF_SSBD) {"
+                ],
+                [
+                    "01daf56875ee0cd50ed496a09b20eb369b45dfa5",
+                    411,
+                    "if ((tifp ^ tifn) & _TIF_SSBD) {"
+                ],
+                [
+                    "9f65fb29374ee37856dbad847b4e121aab72b510",
+                    332,
+                    "if ((tifp ^ tifn) & _TIF_SSBD)"
+                ],
+                [
+                    "885f82bfbc6fefb6664ea27965c3ab9ac4194b8c",
+                    332,
+                    "if ((tifp ^ tifn) & _TIF_RDS)"
+                ]
+            ]
+        },
+        {
+            "line_num": 416,
+            "line_str": "} else if (static_cpu_has(X86_FEATURE_SPEC_CTRL_SSBD) ||",
+            "file_path": "arch/x86/kernel/process.c",
+            "previous_commits": [
+                [
+                    "01daf56875ee0cd50ed496a09b20eb369b45dfa5",
+                    416,
+                    "} else if (static_cpu_has(X86_FEATURE_SPEC_CTRL_SSBD) ||"
+                ],
+                [
+                    "11fb0683493b2da112cd64c9dada221b52463bf7",
+                    411,
+                    "else if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD))"
+                ],
+                [
+                    "1f50ddb4f4189243c05926b842dc1a0332195f31",
+                    400,
+                    "if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD))"
+                ],
+                [
+                    "52817587e706686fcdb27f14c1b000c92f266c96",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD)) {"
+                ],
+                [
+                    "9f65fb29374ee37856dbad847b4e121aab72b510",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_AMD_SSBD)) {"
+                ],
+                [
+                    "885f82bfbc6fefb6664ea27965c3ab9ac4194b8c",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_AMD_RDS)) {"
+                ]
+            ]
+        },
+        {
+            "line_num": 414,
+            "line_str": "} else if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD)) {",
+            "file_path": "arch/x86/kernel/process.c",
+            "previous_commits": [
+                [
+                    "01daf56875ee0cd50ed496a09b20eb369b45dfa5",
+                    414,
+                    "} else if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD)) {"
+                ],
+                [
+                    "11fb0683493b2da112cd64c9dada221b52463bf7",
+                    411,
+                    "else if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD))"
+                ],
+                [
+                    "1f50ddb4f4189243c05926b842dc1a0332195f31",
+                    400,
+                    "if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD))"
+                ],
+                [
+                    "52817587e706686fcdb27f14c1b000c92f266c96",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD)) {"
+                ],
+                [
+                    "9f65fb29374ee37856dbad847b4e121aab72b510",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_AMD_SSBD)) {"
+                ],
+                [
+                    "885f82bfbc6fefb6664ea27965c3ab9ac4194b8c",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_AMD_RDS)) {"
+                ]
+            ]
+        },
+        {
+            "line_num": 412,
+            "line_str": "if (static_cpu_has(X86_FEATURE_VIRT_SSBD)) {",
+            "file_path": "arch/x86/kernel/process.c",
+            "previous_commits": [
+                [
+                    "01daf56875ee0cd50ed496a09b20eb369b45dfa5",
+                    412,
+                    "if (static_cpu_has(X86_FEATURE_VIRT_SSBD)) {"
+                ],
+                [
+                    "11fb0683493b2da112cd64c9dada221b52463bf7",
+                    409,
+                    "if (static_cpu_has(X86_FEATURE_VIRT_SSBD))"
+                ],
+                [
+                    "1f50ddb4f4189243c05926b842dc1a0332195f31",
+                    400,
+                    "if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD))"
+                ],
+                [
+                    "52817587e706686fcdb27f14c1b000c92f266c96",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_LS_CFG_SSBD)) {"
+                ],
+                [
+                    "9f65fb29374ee37856dbad847b4e121aab72b510",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_AMD_SSBD)) {"
+                ],
+                [
+                    "885f82bfbc6fefb6664ea27965c3ab9ac4194b8c",
+                    286,
+                    "if (static_cpu_has(X86_FEATURE_AMD_RDS)) {"
+                ]
+            ]
+        }
+    ]
+}

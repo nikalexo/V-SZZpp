@@ -8,8 +8,7 @@ import subprocess
 from typing import List, Set
 from git import Commit
 from szz.ma_szz import MASZZ
-from options import Options
-
+from myoptions import Options
 
 class RASZZ(MASZZ):
     """
@@ -39,7 +38,7 @@ class RASZZ(MASZZ):
 
 
     def _extract_refactorings(self, commits):
-        PATH_TO_REFMINER = os.path.join(Options.PYSZZ_HOME, 'tools/RefactoringMiner-2.0/bin/RefactoringMiner.bat')
+        PATH_TO_REFMINER = os.path.join(Options.PYSZZ_HOME, 'tools/RefactoringMiner-2.0/bin/RefactoringMiner')
 
         refactorings = dict()
         for commit in commits:
@@ -49,7 +48,8 @@ class RASZZ(MASZZ):
                 # with open(tmpfile_path, 'w') as tmpfile: 
                 log.info(f'Running RefMiner on {commit}')
                 # print(f'Running RefMiner on {commit}')
-                raw_out = subprocess.check_output(f'"{PATH_TO_REFMINER}" -c "{self._repository_path}" {commit}')
+                print(f'"{PATH_TO_REFMINER}" -c "{self._repository_path}" {commit}')
+                raw_out = subprocess.check_output(f'"{PATH_TO_REFMINER}" -c "{self._repository_path}" {commit}', shell=True)
 
                 # print(raw_out)
                 # clean_str = '\n'.join([line for line in raw_out.split('\n') if not line.startswith("log4j:")])
